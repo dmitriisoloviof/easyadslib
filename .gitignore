@@ -24,3 +24,6 @@ captures/
 .idea/dictionaries
 .idea/libraries
 .idea/caches
+
+# java clases
+easyadslib/src/main/java/com/soloviof/easyads/TestEncode.class
