@@ -1,6 +1,10 @@
 package com.soloviof.easyads;
 
 import android.content.Context;
+import android.content.res.AssetManager;
+
+import java.io.InputStream;
+import java.util.Properties;
 
 public class AdsRepo {
 
@@ -72,5 +76,20 @@ public class AdsRepo {
 
     public static void setResId(Context context, String key, String val) {
         SpHelper.setSPStr(context, key, val);
+    }
+
+    public static void test(Context context) {
+        try {
+            Properties properties = new Properties();
+            AssetManager assetManager = context.getAssets();
+            InputStream inputStream = assetManager.open("test.properties");
+            properties.load(inputStream);
+
+            Logs.print("pulalala", "", "asdasd ====> " + properties.getProperty("apiSecret"));
+
+        } catch (Exception e) {
+            System.out.print(e.getMessage());
+        }
+
     }
 }
