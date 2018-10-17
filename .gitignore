@@ -27,3 +27,7 @@ captures/
 
 # java clases
 easyadslib/src/main/java/com/soloviof/easyads/TestEncode.class
+
+
+# resources clases
+easyadslib/src/main/res/values/secrets.xml

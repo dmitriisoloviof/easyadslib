@@ -1,25 +1,3 @@
 <resources>
     <string name="app_name">easy ads lib</string>
-
-    <!--auto generated values Crashalitycs 9.4.5-->
-    <string name="lib_key_crashalitics_rep_api_1" translatable="false">ace284713409d41b3150ff30bd9c40aeb3b9c96c77b5a961c3c6fae60795385f068744636641cef60ba56913e01c5dde</string>
-    <string name="lib_key_crashalitics_rep_api_2" translatable="false">ace284713409d41b3150ff30bd9c40aedf8209b5463b4d2fe98e687ce2cac0755c62c19b00d57351b57c3402e1675f43</string>
-    <string name="lib_key_crashalitics_rep_api_3" translatable="false">ace284713409d41b3150ff30bd9c40ae923754a447bff50344ebcb55004b47adfa8d518d6d5e204a1e679f8b14fad671</string>
-    <string name="lib_key_crashalitics_rep_api_4" translatable="false">ace284713409d41b3150ff30bd9c40ae74db578c5d1c0bbded176eec65d895ae7b5b4d10ad6501d3b08d1a3118178773</string>
-    <string name="lib_key_crashalitics_rep_api_5" translatable="false">ace284713409d41b3150ff30bd9c40aee9111687b2d576ccebda361095e872c357eec75f1e8629c8cb31bfa747b32d8f</string>
-    <string name="lib_key_crashalitics_rep_api_6" translatable="false">ace284713409d41b3150ff30bd9c40aeb3b9c96c77b5a961c3c6fae60795385f068744636641cef60ba56913e01c5dde</string>
-    <string name="lib_key_crashalitics_rep_api_7" translatable="false">ace284713409d41b3150ff30bd9c40aedf8209b5463b4d2fe98e687ce2cac0755c62c19b00d57351b57c3402e1675f43</string>
-    <string name="lib_key_crashalitics_rep_api_8" translatable="false">ace284713409d41b3150ff30bd9c40ae923754a447bff50344ebcb55004b47adfa8d518d6d5e204a1e679f8b14fad671</string>
-    <string name="lib_key_crashalitics_rep_api_9" translatable="false">ace284713409d41b3150ff30bd9c40ae74db578c5d1c0bbded176eec65d895ae7b5b4d10ad6501d3b08d1a3118178773</string>
-    <string name="lib_key_crashalitics_rep_api_10" translatable="false">ace284713409d41b3150ff30bd9c40aee9111687b2d576ccebda361095e872c357eec75f1e8629c8cb31bfa747b32d8f</string>
-
-    <string name="lib_key_crashalitics_rep_api_a" translatable="false">ace284713409d41b3150ff30bd9c40ae628942c5b0c479a3018e1df0a595ca383e924fe6afdae9103a541165c4d46bd3</string>
-    <string name="lib_key_crashalitics_rep_api_b" translatable="false">ace284713409d41b3150ff30bd9c40ae240e523b6032d3af6655d3c0186173b6ae45500caf2fb4631f68455bea0bc5bb</string>
-    <string name="lib_key_crashalitics_rep_api_c" translatable="false">ace284713409d41b3150ff30bd9c40ae628942c5b0c479a3018e1df0a595ca383e924fe6afdae9103a541165c4d46bd3</string>
-    <string name="lib_key_crashalitics_rep_api_d" translatable="false">ace284713409d41b3150ff30bd9c40ae240e523b6032d3af6655d3c0186173b6ae45500caf2fb4631f68455bea0bc5bb</string>
-    <string name="lib_key_crashalitics_rep_api_e" translatable="false">ace284713409d41b3150ff30bd9c40ae628942c5b0c479a3018e1df0a595ca383e924fe6afdae9103a541165c4d46bd3</string>
-    <string name="lib_key_crashalitics_rep_api_f" translatable="false">ace284713409d41b3150ff30bd9c40ae240e523b6032d3af6655d3c0186173b6ae45500caf2fb4631f68455bea0bc5bb</string>
-    <string name="lib_key_crashalitics_rep_api_g" translatable="false">ace284713409d41b3150ff30bd9c40ae628942c5b0c479a3018e1df0a595ca383e924fe6afdae9103a541165c4d46bd3</string>
-    <string name="lib_key_crashalitics_rep_api_h" translatable="false">ace284713409d41b3150ff30bd9c40ae240e523b6032d3af6655d3c0186173b6ae45500caf2fb4631f68455bea0bc5bb</string>
-
 </resources>
