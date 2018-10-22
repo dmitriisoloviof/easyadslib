@@ -1,6 +1,8 @@
 package com.soloviof.easyads;
 
-public class TestRepo {
+import android.content.Context;
+
+class TestRepo {
 
     static final int DEBUG_MODE = 3;
     static final int DEBUG_TEST_KEY = 0;
@@ -9,13 +11,14 @@ public class TestRepo {
         return debugState % TestRepo.DEBUG_MODE == TestRepo.DEBUG_TEST_KEY;
     }
 
-    static String getDebugId(String id) {
+    static String getDebugId(Context context, String strInput) {
         try {
-            return new String(new Crypter().decrypt(id));
+            return new String(new Crypter(context).decrypt(strInput));
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        return "unknown";
+        return null;
     }
+
 }

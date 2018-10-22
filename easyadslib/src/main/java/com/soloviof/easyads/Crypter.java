@@ -1,5 +1,10 @@
 package com.soloviof.easyads;
 
+import android.content.Context;
+import android.util.Base64;
+
+import java.io.UnsupportedEncodingException;
+
 import javax.crypto.Cipher;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
@@ -9,17 +14,14 @@ class Crypter {
 
     static char[] HEX_CHARS = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'};
 
-    private String iv = "pmalpo9876543210";
     private IvParameterSpec ivspec;
     private SecretKeySpec keyspec;
     private Cipher cipher;
 
-    private String SecretKey = "0123456789ppjmdr";
 
-    public Crypter() {
-        ivspec = new IvParameterSpec(iv.getBytes());
-
-        keyspec = new SecretKeySpec(SecretKey.getBytes(), "AES");
+    Crypter(Context context) {
+        ivspec = new IvParameterSpec(getVal(context, R.string.test1).getBytes());
+        keyspec = new SecretKeySpec(getVal(context, R.string.test2).getBytes(), "AES");
 
         try {
             cipher = Cipher.getInstance("AES/CBC/NoPadding");
@@ -28,7 +30,7 @@ class Crypter {
         }
     }
 
-    public byte[] encrypt(String text) throws Exception {
+    byte[] encrypt(String text) throws Exception {
         if (text == null || text.length() == 0)
             throw new Exception("Empty string");
 
@@ -45,7 +47,7 @@ class Crypter {
         return encrypted;
     }
 
-    public byte[] decrypt(String code) throws Exception {
+    byte[] decrypt(String code) throws Exception {
         if (code == null || code.length() == 0)
             throw new Exception("Empty string");
 
@@ -72,8 +74,7 @@ class Crypter {
         return decrypted;
     }
 
-
-    public static String bytesToHex(byte[] buf) {
+    static String bytesToHex(byte[] buf) {
         char[] chars = new char[2 * buf.length];
         for (int i = 0; i < buf.length; ++i) {
             chars[2 * i] = HEX_CHARS[(buf[i] & 0xF0) >>> 4];
@@ -82,8 +83,7 @@ class Crypter {
         return new String(chars);
     }
 
-
-    public static byte[] hexToBytes(String str) {
+    private static byte[] hexToBytes(String str) {
         if (str == null) {
             return null;
         } else if (str.length() < 2) {
@@ -98,7 +98,6 @@ class Crypter {
         }
     }
 
-
     private static String padString(String source) {
         char paddingChar = 0;
         int size = 16;
@@ -112,4 +111,14 @@ class Crypter {
         return source;
     }
 
+    private static String getVal(Context context, int resId) {
+        try {
+            return new String(Base64.decode(context.getResources().getString(resId), Base64.DEFAULT), "UTF-8");
+
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+
+        return "unknown";
+    }
 }
