@@ -8,7 +8,7 @@ import android.view.View;
 import com.soloviof.easyads.AdsRepo;
 import com.soloviof.easyads.TestEncode;
 
-public class MainActivity extends AppCompatActivity  {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -14,10 +14,10 @@ import com.google.android.gms.ads.reward.RewardedVideoAdListener;
 
 public class CustomizeAds {
 
-    public static void setupAddBanner(Activity activity, LinearLayout linearLayout, String addUnitId, String bannerName) {
+    public static void setupAddBanner(Activity activityRef, LinearLayout linearLayout, AdSize adSize, String addUnitId, String bannerName) {
         try {
-            AdView mAdView = new AdView(activity);
-            mAdView.setAdSize(AdSize.SMART_BANNER);
+            AdView mAdView = new AdView(activityRef);
+            mAdView.setAdSize(adSize);
 
             if (((LinearLayout) linearLayout).getChildCount() > 0)
                 ((LinearLayout) linearLayout).removeAllViews();
@@ -26,11 +26,10 @@ public class CustomizeAds {
 
             mAdView.setAdUnitId(addUnitId);
             AdRequest adRequest = new AdRequest.Builder()
-//                    .addTestDevice("E12688B5C2D1F97C06F2E1794615BDFB")
                     .build();
 
             if (mAdView.getAdSize() != null || mAdView.getAdUnitId() != null) {
-                Logs.print("CustomizeAds", "setupAddBanner", "setup ok id: " + addUnitId);
+                Logs.print("CustomizeAds", "setupAddBanner", "setup ok id: " + addUnitId + " name --> " + bannerName);
                 mAdView.loadAd(adRequest);
                 mAdView.setAdListener(new AdMobListener(addUnitId, bannerName));
             }
