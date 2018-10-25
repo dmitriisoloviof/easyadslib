@@ -1,27 +1,43 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 28
+       compileSdkVersion 28
 
     defaultConfig {
         applicationId "com.soloviof.easyads.example"
         minSdkVersion 15
         targetSdkVersion 28
-        versionCode 142
-        versionName "1.42"
+
+        versionCode 143
+        versionName "1.43"
+    }
+
+    signingConfigs {
+        release {
+            try {
+                keyAlias KEY_BUILDS_PASS
+                keyPassword KEY_BUILDS_PASS
+                storeFile file('testexample.jks')
+                storePassword KEY_BUILDS_PASS
+            }
+
+            catch (ex) {
+                throw new InvalidUserDataException("Forgot to define KEY_BUILDS_PASS in gradle.properties?")
+            }
+        }
     }
 
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
     }
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:28.0.0'
-
     implementation project(':easyadslib')
 }
