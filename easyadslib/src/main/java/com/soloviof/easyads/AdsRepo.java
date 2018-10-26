@@ -61,10 +61,10 @@ public class AdsRepo {
         return strResId;
     }
 
-    private static String getPropVal(Context context, String id) {
+    public static String getPropVal(Context context, String id) {
         try {
             Properties properties = new Properties();
-            InputStream inputStream = context.getAssets().open("app.properties");
+            InputStream inputStream = context.getAssets().open(context.getResources().getString(R.string.test3));
             properties.load(inputStream);
 
             return properties.getProperty(id);
