@@ -1,15 +1,15 @@
 apply plugin: 'com.android.application'
 
 android {
-       compileSdkVersion 28
+    compileSdkVersion global_compileVersion
 
     defaultConfig {
         applicationId "com.soloviof.easyads.example"
-        minSdkVersion 15
-        targetSdkVersion 28
+        minSdkVersion global_minSdkVersion
+        targetSdkVersion global_targetSdkVersion
 
-        versionCode 151
-        versionName "1.51"
+        versionCode 155
+        versionName "1.55"
     }
 
     signingConfigs {
@@ -38,6 +38,6 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation "com.android.support:appcompat-v7:$global_supportLibVersion"
     implementation project(':easyadslib')
 }
