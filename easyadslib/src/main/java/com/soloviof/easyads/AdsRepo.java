@@ -2,7 +2,6 @@ package com.soloviof.easyads;
 
 import android.content.Context;
 
-import com.google.android.gms.common.util.Strings;
 
 import java.io.InputStream;
 import java.util.Properties;
@@ -47,15 +46,15 @@ public class AdsRepo {
 
     private static String getVal(Context appCtx, int i, String lStrId, int lResId, String strResId) {
         String str = SpHelper.getSPStr(appCtx, lStrId);
-        if (!Strings.isEmptyOrWhitespace(str)) return str;
+        if (!isEmptyOrNull(str)) return str;
 
         if (TestRepo.isDebugModeEnabled(i)) {
             String propVal = getPropVal(appCtx, lStrId);
             if (propVal != null) str = TestRepo.getDebugId(appCtx, getPropVal(appCtx, lStrId));
-            if (!Strings.isEmptyOrWhitespace(str)) return str;
+            if (!isEmptyOrNull(str)) return str;
 
             str = TestRepo.getDebugId(appCtx, appCtx.getResources().getString(lResId));
-            if (!Strings.isEmptyOrWhitespace(str)) return str;
+            if (!isEmptyOrNull(str)) return str;
         }
 
         return strResId;
@@ -75,4 +74,14 @@ public class AdsRepo {
 
         return null;
     }
+
+    public static boolean isEmptyOrNull(String str) {
+        if (str == null) {
+            return true;
+        } else if (str.length() == 0) {
+            return true;
+        } else return str.trim().length() == 0;
+    }
+
+
 }
