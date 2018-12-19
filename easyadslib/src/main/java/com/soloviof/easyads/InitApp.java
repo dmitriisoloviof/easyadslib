@@ -2,14 +2,20 @@ package com.soloviof.easyads;
 
 import android.content.Context;
 
+import com.google.android.gms.ads.MobileAds;
+
 public class InitApp {
 
     public static boolean TEST_V_ENABLED;
 
     public static void doFirebaseInit(Context ctx, String firebaseAppId) {
-        //todo use for firebase ads 17.0+
+        try {
+            TEST_V_ENABLED = test(ctx);
+            MobileAds.initialize(ctx, firebaseAppId);
 
-        TEST_V_ENABLED = test(ctx);
+        } catch (Throwable ex) {
+            ex.printStackTrace();
+        }
     }
 
     private static boolean test(Context ctx) {

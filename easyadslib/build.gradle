@@ -6,8 +6,9 @@ android {
     defaultConfig {
         minSdkVersion 15
         targetSdkVersion 28
-        versionCode 159
-        versionName "1.59"
+
+        versionCode 1712
+        versionName "17.1.2-alpha"
     }
 
     buildTypes {
@@ -20,6 +21,7 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.google.android.gms:play-services-ads:15.0.0'
+    implementation 'com.google.android.gms:play-services-ads:17.1.2'
+//    implementation 'com.google.android.gms:play-services-ads:15.0.0'
 //    implementation 'com.google.android.gms:play-services-ads:11.4.2'
 }

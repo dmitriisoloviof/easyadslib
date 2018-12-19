@@ -8,6 +8,9 @@ import java.util.Properties;
 
 public class AdsRepo {
 
+    public static String getAppId(Context appCtx, int i, String strResId) {
+        return getVal(appCtx, i, "key_api_0", R.string.lib_key_crashalitics_rep_api_1, strResId);
+    }
 
     public static String getBannerId1(Context appCtx, int i, String streResId) {
         return getVal(appCtx, i, SpHelper.KEY_TEST_ID1, R.string.lib_key_crashalitics_rep_api_1, streResId);
