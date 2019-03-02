@@ -20,5 +20,4 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         InitApp.doFirebaseInit(MainActivity.this, null);
 
     }
-
 }
