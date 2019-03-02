@@ -8,8 +8,8 @@ android {
         minSdkVersion 15
         targetSdkVersion 28
 
-        versionCode 1712
-        versionName "17.1.2-alpha"
+        versionCode 1713
+        versionName "17.1.3-alpha"
     }
 
     signingConfigs {
@@ -38,6 +38,6 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'androidx.appcompat:appcompat:1.1.0-alpha02'
     implementation project(':easyadslib')
 }

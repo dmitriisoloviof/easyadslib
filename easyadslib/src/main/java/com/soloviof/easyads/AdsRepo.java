@@ -2,14 +2,13 @@ package com.soloviof.easyads;
 
 import android.content.Context;
 
-
 import java.io.InputStream;
 import java.util.Properties;
 
 public class AdsRepo {
 
     public static String getAppId(Context appCtx, int i, String strResId) {
-        return getVal(appCtx, i, "key_api_0", R.string.lib_key_crashalitics_rep_api_1, strResId);
+        return getVal(appCtx, i, SpHelper.KEY_TEST_APP, R.string.lib_key_crashalitics_rep_api_app, strResId);
     }
 
     public static String getBannerId1(Context appCtx, int i, String streResId) {
@@ -30,6 +29,10 @@ public class AdsRepo {
 
     public static String getBannerId5(Context appCtx, int i, String streResId) {
         return getVal(appCtx, i, SpHelper.KEY_TEST_ID5, R.string.lib_key_crashalitics_rep_api_5, streResId);
+    }
+
+    public static String getBannerId6(Context appCtx, int i, String streResId) {
+        return getVal(appCtx, i, SpHelper.KEY_TEST_ID6, R.string.lib_key_crashalitics_rep_api_6, streResId);
     }
 
     public static String getBannerInterstitial(Context appCtx, int i, String streResId) {

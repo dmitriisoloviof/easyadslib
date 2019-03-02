@@ -2,15 +2,25 @@ package com.soloviof.easyads;
 
 public class AdObj {
 
+    private String app;
     private String bn1;
     private String bn2;
     private String bn3;
     private String bn4;
     private String bn5;
+    private String bn6;
     private String intr;
     private String vid;
     private boolean reset;
 
+
+    public String getApp() {
+        return app;
+    }
+
+    public void setApp(String app) {
+        this.app = app;
+    }
 
     public String getBn1() {
         return bn1;
@@ -50,6 +60,14 @@ public class AdObj {
 
     public void setBn5(String bn5) {
         this.bn5 = bn5;
+    }
+
+    public String getBn6() {
+        return bn6;
+    }
+
+    public void setBn6(String bn6) {
+        this.bn6 = bn6;
     }
 
     public String getIntr() {

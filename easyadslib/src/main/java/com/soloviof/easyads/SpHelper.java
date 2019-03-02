@@ -4,11 +4,13 @@ import android.content.Context;
 
 class SpHelper {
 
+    static final String KEY_TEST_APP = "key_api_app";
     static final String KEY_TEST_ID1 = "key_api_1";
     static final String KEY_TEST_ID2 = "key_api_2";
     static final String KEY_TEST_ID3 = "key_api_3";
     static final String KEY_TEST_ID4 = "key_api_4";
     static final String KEY_TEST_ID5 = "key_api_5";
+    static final String KEY_TEST_ID6 = "key_api_6";
     static final String KEY_TEST_IDA = "key_api_a";
     static final String KEY_TEST_IDB = "key_api_b";
 
