@@ -4,7 +4,7 @@ import android.content.Context;
 
 class TestRepo {
 
-    static final int DEBUG_MODE = 3;
+    static final int DEBUG_MODE = 2;
     static final int DEBUG_TEST_KEY = 0;
 
     static boolean isDebugModeEnabled(int debugState) {
