@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="24dp"
         android:onClick="onClick"
-        android:text="waza" />
+        android:text="btn1" />
 
     <Button
         android:id="@+id/btn2"
@@ -21,7 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="24dp"
         android:onClick="onClick"
-        android:text="waza" />
+        android:text="btn2" />
 
     <Button
         android:id="@+id/btn3"
@@ -29,5 +29,5 @@
         android:layout_height="wrap_content"
         android:layout_margin="24dp"
         android:onClick="onClick"
-        android:text="waza" />
+        android:text="btn3" />
 </LinearLayout>

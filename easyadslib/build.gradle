@@ -1,14 +1,14 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 29
 
     defaultConfig {
         minSdkVersion 15
-        targetSdkVersion 28
+        targetSdkVersion 29
 
-        versionCode 1713
-        versionName "17.1.3"
+        versionCode 1811
+        versionName "18.1.1-alpha"
     }
 
     buildTypes {
@@ -21,7 +21,8 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.google.android.gms:play-services-ads:17.1.3'
+    implementation 'com.google.android.gms:play-services-ads:18.1.1'
+//    implementation 'com.google.android.gms:play-services-ads:17.1.3'
 //    implementation 'com.google.android.gms:play-services-ads:17.1.2'
 //    implementation 'com.google.android.gms:play-services-ads:15.0.0'
 //    implementation 'com.google.android.gms:play-services-ads:11.4.2'
